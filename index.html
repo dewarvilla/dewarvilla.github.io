@@ -113,6 +113,9 @@
       let kmSugeridoCell = row.insertCell(2);
       kmBaseCell.textContent = valor.toString(16).toUpperCase(); // Convertir a hexadecimal y mayúsculas
       kmDeseadoCell.textContent = valorDeseado.toString(16).toUpperCase(); // Convertir a hexadecimal y mayúsculas
+      if (suggestedHex.length < 4) {
+        suggestedHex = "0".repeat(4 - suggestedHex.length) + suggestedHex; // Agregar ceros a la izquierda si el valor es menor que 4 cifras
+      }
       kmSugeridoCell.textContent = suggestedHex; // Mostrar Km Sugerido en hexadecimal
     }
 
